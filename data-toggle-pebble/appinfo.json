@@ -1,0 +1,39 @@
+{
+	"uuid": "23b109a6-4bd1-4e3d-90b5-92f4155cdb86",
+	"shortName": "Data Toggle",
+	"longName": "Data Toggle",
+	"companyName": "Chris Lewis",
+	"versionCode": 1,
+	"versionLabel": "1.0.0",
+	"watchapp": {
+		"watchface": false
+	},
+	"appKeys": {
+		"dummy": 0
+	},
+	"resources": {
+	"media": [
+				{
+					"type": "png",
+					"name": "WIFI",
+					"file": "images/wifi.png"
+				},
+				{
+					"type": "png",
+					"name": "DATA",
+					"file": "images/data.png"
+				},
+				{
+					"menuIcon": true,
+					"type": "png",
+					"name": "MENU_ICON",
+					"file": "images/menu_icon.png"
+				},
+				{
+					"name": "FONT_IMAGINE_40",
+					"type": "font",
+					"file": "fonts/imagine.ttf"
+				}
+			]
+	}
+}
