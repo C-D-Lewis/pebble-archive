@@ -1,0 +1,26 @@
+{
+	"friendlyVersion": "VERSION", 
+	"versionDefName": "APP_RESOURCES", 
+	"media":	[
+							{
+								"type":"png",
+								"defName":"BACKGROUND_IMAGE",
+								"file":"images/back8.png"
+							},
+							{	
+								"type": "png",
+								"defName": "IMAGE_MENU_ICON",
+								"file": "images/menu_icon.png"
+							},
+							{
+								"type": "font",
+								"defName": "FONT_MAIN_FONT_30",
+								"file": "fonts/MonospaceBold.ttf"
+							},
+							{
+								"type": "font",
+								"defName": "FONT_MAIN_FONT_20",
+								"file": "fonts/MonospaceBold.ttf"
+							}
+						]	
+}
