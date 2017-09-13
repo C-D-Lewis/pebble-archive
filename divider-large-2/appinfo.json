@@ -1,0 +1,29 @@
+{
+  "uuid": "8b6a79bb-d6d7-4f05-950a-c68a7945126e",
+  "shortName": "PDivider Large",
+  "longName": "Potential Divider Large",
+  "companyName": "Chris",
+  "versionCode": 1,
+  "versionLabel": "1.0.0",
+  "watchapp": {
+    "watchface": true
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": [
+      {
+        "type": "png",
+        "name": "BACKGROUND",
+        "file": "images/background.png"
+      },
+      {
+        "menuIcon": true,
+        "type": "png",
+        "name": "APP_ICON",
+        "file": "images/menu_icon.png"
+      }
+    ]
+  }
+}

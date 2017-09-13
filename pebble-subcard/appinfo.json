@@ -1,0 +1,24 @@
+{
+    "versionLabel": "1.0",
+    "uuid": "0563786d-5866-4c1d-8569-3625d9906d75",
+    "appKeys": {},
+    "longName": "Subcard",
+    "versionCode": 1,
+    "capabilities": [
+        ""
+    ],
+    "shortName": "Subcard",
+    "companyName": "Chris Lewis",
+    "watchapp": {
+        "watchface": false
+    },
+    "resources": {
+        "media": [
+            {
+                "type": "png",
+                "name": "QR",
+                "file": "images/qr.png"
+            }
+        ]
+    }
+}
