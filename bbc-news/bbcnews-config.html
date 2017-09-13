@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BBC News Configuration</title>
+  </head>
+  <body>
+    <h2>BBC News Configuration</h2>
+    Choose settings, click 'Save' and reload app.
+ 
+    <p>I want
+    <select id="quantity_select">
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="30">30</option>
+    </select>
+    stories from
+    <select id="category_select">
+      <option value="headlines">Headlines</option>
+      <option value="world">World</option>
+      <option value="uk">UK</option>
+      <option value="politics">Politics</option>
+      <option value="health">Health</option>
+      <option value="education">Education</option>
+      <option value="scienv">Science/Environment</option>
+      <option value="technology">Technology</option>
+      <option value="entertainarts">Entertainment & Arts</option>
+    </select>
+    </p>
+
+    <p>
+    News story detail text should be font size
+    <select id="detail_size_select">
+      <option value="18">18</option>
+      <option value="24">24</option>
+    </select>
+    </p>
+
+    <p>
+    <button id="save_button">Save</button>
+    </p>
+
+    <hr />
+    <h2>Version</h2>
+    <p id="current_version">Current version:</p>
+    <p id="p_version">Getting latest version...</p>
+
+    <hr />
+
+    <p>
+    <h2>Latest News</h2>
+    <p id="news">Loading...</p>
+    </p>
+
+    <script>
+      var xhrAsyncRequest = function (url, type, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.onload =  function () {
+          callback(this.responseText);
+        };
+        xhr.open(type, url);
+        xhr.send();
+      };
+
+      function getAppVersionAndNews() {
+        //Get latest
+        xhrAsyncRequest(
+          "https://dl.dropboxusercontent.com/u/10824180/pebble%20config%20pages/app_versions.json", 
+          "GET",
+          function(responseText) {
+            var json = JSON.parse(responseText);
+
+            //Show version
+            document.getElementById("p_version").innerHTML = "Latest version: " + json.bbcnews;
+
+            //Show news
+            document.getElementById("news").innerHTML = "" + json.bbcnewsnews;
+          }
+        );
+
+        //Get local
+        var version = "" + document.location;
+        version = version.substring(version.indexOf("version=") + "version=".length);
+        document.getElementById("current_version").innerHTML = "Current version: " + version;
+      }
+
+      //Setup to allow easy adding more options later
+      function saveOptions() {
+        var categorySelect = document.getElementById("category_select");
+        var quantitySelect = document.getElementById("quantity_select");
+        var detailSizeSelect = document.getElementById("detail_size_select");
+     
+        var options = {
+          "category": categorySelect.options[categorySelect.selectedIndex].value,
+          "quantity": quantitySelect.options[quantitySelect.selectedIndex].value,
+          "detail_size": detailSizeSelect.options[detailSizeSelect.selectedIndex].value
+        }
+         
+        return options;
+      };
+     
+      var submitButton = document.getElementById("save_button");
+      submitButton.addEventListener("click", 
+        function() {
+          var options = saveOptions();
+          var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
+           
+          document.location = location;
+        }, 
+      false);
+
+      getAppVersionAndNews();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "uuid": "945eb327-7659-440b-9ac0-e96dd5e45cc2",
+  "shortName": "BBC News",
+  "longName": "BBC News",
+  "companyName": "Chris Lewis",
+  "versionCode": 3,
+  "versionLabel": "1.3.0",
+  "capabilities": [ "configurable" ],
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "KEY_TITLE": 0,
+    "KEY_DESCRIPTION": 1,
+    "KEY_QUANTITY": 2,
+    "KEY_DETAIL_SIZE": 3
+  },
+  "resources": {
+    "media": [
+      {
+        "type": "font",
+        "name": "FONT_GILLSANS_18",
+        "file": "fonts/gillsans.ttf"
+      },
+      {
+        "type": "png",
+        "name": "LOGO",
+        "file": "images/logo.png"
+      },
+      {
+        "menuIcon": true,
+        "type": "png",
+        "name": "APP_ICON",
+        "file": "images/app_icon.png"
+      }
+    ]
+  }
+}

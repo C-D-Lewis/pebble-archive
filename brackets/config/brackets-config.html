@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brackets Configuration</title>
+  </head>
+  <body>
+    <h2>Brackets Configuration</h2>
+    <hr/>
+
+    <h3>Colors</h3>
+    <h4>(Pebble Time/Time Steel/Time Round only)</h4>
+    <a href="https://developer.getpebble.com/more/color-picker/">Hex color picker</a> (get code then return here).
+    <br/><br/>
+    <table>
+      <tr><td>Background color (Hex)</td><td><input type="text" size="8" id="text_background_color"></td></tr>
+      <tr><td>Date color (Hex)</td><td><input type="text" size="8" id="text_date_color"></td></tr>
+      <tr><td>Time color (Hex)</td><td><input type="text" size="8" id="text_time_color"></td></tr>
+      <tr><td>Bracket color (Hex)</td><td><input type="text" size="8" id="text_bracket_color"></td></tr>
+      <tr><td>Line color (Hex)</td><td><input type="text" size="8" id="text_line_color"></td></tr>
+      <tr><td>Complication color (Hex)</td><td><input type="text" size="8" id="text_complication_color"></td></tr>
+    </table>
+    <hr/>
+
+    <h3>Features</h3>
+    </p>
+    <table>
+      <tr><td>Battery meter</td><td><input id='check_battery_meter' type='checkbox'/></td></tr>
+      <tr><td>Bluetooth alerts</td><td><input id='check_bluetooth_alerts' type='checkbox'/></td></tr>
+      <tr><td>Dashed line</td><td><input id='check_dashed_line' type='checkbox'/></td></tr>
+      <tr><td>Second tick</td><td><input id='check_second_tick' type='checkbox'/></td></tr>
+    </table>
+
+    <p> <button style="display: block; width: 100%;" id='save_button'>Save</button></p>
+
+    <hr/>
+    <h3>Version</h3>
+    <p id='current_version'>Current version:</p>
+    <p id='p_version'>Getting latest version...</p>
+
+    <hr/>
+
+    <p>
+      <h3>Latest News</h3>
+      <p id='news'>Loading...</p>
+    </p>
+
+    <script>
+      function persistWrite(key, value) {
+        localStorage.setItem(key, value);
+      }
+
+      var persistRead = function(key, defaultValue) {
+        if(localStorage.getItem(key) === null) {
+          return defaultValue;
+        } else {
+          return localStorage.getItem(key);
+        }
+      };
+
+      function ajax(url, type, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function () {
+          callback(this.responseText);
+        };
+        xhr.open(type, url);
+        xhr.send();
+      };
+
+      function firstTimeSetup() {
+        if(!persistRead('brackets-first-time', false)) {
+          persistWrite('brackets-first-time', true);
+          console.log('This is the first launch!');
+
+          // Align with watchapp defaults
+          persistWrite('check_battery_meter', 'true');
+          persistWrite('check_bluetooth_alerts', 'true');
+          persistWrite('check_dashed_line', 'true');
+          persistWrite('check_second_tick', 'true');
+
+          persistWrite('text_background_color', 'FFFFFF');
+          persistWrite('text_date_color', '000000');
+          persistWrite('text_time_color', '000000');
+          persistWrite('text_line_color', '666666');
+          persistWrite('text_bracket_color', '000000');
+          persistWrite('text_complication_color', '000000');
+        }
+      }
+
+      function loadConfig() {
+        document.getElementById('check_battery_meter').checked = persistRead('check_battery_meter', 'false') === 'true';
+        document.getElementById('check_bluetooth_alerts').checked = persistRead('check_bluetooth_alerts', 'false') === 'true';
+        document.getElementById('check_dashed_line').checked = persistRead('check_dashed_line', 'false') === 'true';
+        document.getElementById('check_second_tick').checked = persistRead('check_second_tick', 'false') === 'true';
+
+        document.getElementById('text_background_color').value = '' + persistRead('text_background_color', '000000');
+        document.getElementById('text_date_color').value = '' + persistRead('text_date_color', '000000');
+        document.getElementById('text_time_color').value = '' + persistRead('text_time_color', '000000');
+        document.getElementById('text_bracket_color').value = '' + persistRead('text_bracket_color', '000000');
+        document.getElementById('text_line_color').value = '' + persistRead('text_line_color', '000000');
+        document.getElementById('text_complication_color').value = '' + persistRead('text_complication_color', '000000');
+      }
+
+      function getAppVersionAndNews() {
+        //Get latest
+        var url = 'https://dl.dropboxusercontent.com/u/10824180/pebble%20config%20pages/app_versions.json';
+        ajax(url, 'GET', function(responseText) {
+          var json = JSON.parse(responseText);
+          document.getElementById('p_version').innerHTML = 'Latest version: ' + json.brackets;
+          document.getElementById('news').innerHTML = '' + json.bracketsnews;
+        });
+
+        //Get local
+        var version = '' + document.location;
+        version = version.substring(version.indexOf('version=') + 'version='.length);
+        document.getElementById('current_version').innerHTML = 'Current version: ' + version;
+      }
+
+      var submitButton = document.getElementById('save_button');
+      submitButton.addEventListener('click', function() {
+        var options = {
+          'check_battery_meter': document.getElementById('check_battery_meter').checked ? 'true' : 'false',
+          'check_bluetooth_alerts': document.getElementById('check_bluetooth_alerts').checked ? 'true' : 'false',
+          'check_dashed_line': document.getElementById('check_dashed_line').checked ? 'true' : 'false',
+          'check_second_tick': document.getElementById('check_second_tick').checked ? 'true' : 'false',
+          
+          'text_background_color': '' + document.getElementById('text_background_color').value,
+          'text_date_color': '' + document.getElementById('text_date_color').value,
+          'text_time_color': '' + document.getElementById('text_time_color').value,
+          'text_line_color': '' + document.getElementById('text_line_color').value,
+          'text_bracket_color': '' + document.getElementById('text_bracket_color').value,
+          'text_complication_color': '' + document.getElementById('text_complication_color').value
+        };
+
+        // Save
+        persistWrite('check_battery_meter', options['check_battery_meter']);
+        persistWrite('check_bluetooth_alerts', options['check_bluetooth_alerts']);
+        persistWrite('check_dashed_line', options['check_dashed_line']);
+        persistWrite('check_second_tick', options['check_second_tick']);
+
+        persistWrite('text_background_color', options['text_background_color']);
+        persistWrite('text_date_color', options['text_date_color']);
+        persistWrite('text_time_color', options['text_time_color']);
+        persistWrite('text_line_color', options['text_line_color']);
+        persistWrite('text_bracket_color', options['text_bracket_color']);
+        persistWrite('text_complication_color', options['text_complication_color']);
+
+        // Return
+        document.location = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(options));
+      }, false);
+
+      firstTimeSetup();
+      getAppVersionAndNews();
+      loadConfig();
+    </script>
+  </body>
+</html>
