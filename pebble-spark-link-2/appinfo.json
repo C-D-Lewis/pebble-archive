@@ -1,0 +1,17 @@
+{
+  "uuid": "eb504438-3b20-44e1-9692-4ed011114fdb",
+  "shortName": "pebble-spark-link-2",
+  "longName": "pebble-spark-link-2",
+  "companyName": "Chris Lewis",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "KEY_BUTTON_STATE": 0
+  },
+  "resources": {
+    "media": []
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "uuid": "a1021f1e-08de-4e91-9f74-bc3828078da6",
+  "shortName": "pebble-trends-chris",
+  "longName": "pebble-trends-chris",
+  "companyName": "ChrisandJathusan",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "projectType": "native",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "KEY_TITLE": 0,
+    "KEY_TIMESTAMP": 1,
+    "KEY_SPARK_SHOW": 2,
+    "KEY_FINISHED": 3
+  },
+  "resources": {
+    "media": [
+      {
+          "file": "fonts/Roboto-Bold.ttf",
+          "name": "ROBOTO_BOLD_20",
+          "type": "font"
+      },
+      {
+          "file": "fonts/Roboto-Bold.ttf",
+          "name": "ROBOTO_BOLD_24",
+          "type": "font"
+      }
+    ]
+  }
+}

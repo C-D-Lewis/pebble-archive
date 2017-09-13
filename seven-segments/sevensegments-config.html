@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seven Segments Configuration</title>
+  </head>
+  <body>
+    <h2>Seven Segments Configuration</h2>
+    Choose settings, click 'Save' and reload app.
+ 
+    <p>Invert: 
+    <select id="inverted_select">
+      <option value="no">No</option>
+      <option value="yes">Yes</option>
+    </select>
+    </p>
+
+    <p>
+    <button id="save_button">Save</button>
+    </p>
+
+    <hr />
+    <h2>Version</h2>
+    <p id="current_version">Current version:</p>
+    <p id="p_version">Getting latest version...</p>
+
+    <hr />
+
+    <p>
+    <h2>Latest News</h2>
+    <p id="news">Loading...</p>
+    </p>
+
+    <script>
+      var xhrAsyncRequest = function (url, type, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.onload =  function () {
+          callback(this.responseText);
+        };
+        xhr.open(type, url);
+        xhr.send();
+      };
+
+      function getAppVersionAndNews() {
+        //Get latest
+        xhrAsyncRequest(
+          "https://dl.dropboxusercontent.com/u/10824180/pebble%20config%20pages/app_versions.json", 
+          "GET",
+          function(responseText) {
+            var json = JSON.parse(responseText);
+
+            //Show version
+            document.getElementById("p_version").innerHTML = "Latest version: " + json.sevensegments;
+
+            //Show news
+            document.getElementById("news").innerHTML = "" + json.sevensegmentsnews;
+          }
+        );
+
+        //Get local
+        var version = "" + document.location;
+        version = version.substring(version.indexOf("version=") + "version=".length);
+        document.getElementById("current_version").innerHTML = "Current version: " + version;
+      }
+
+      //Setup to allow easy adding more options later
+      function saveOptions() {
+        var invertedSelect = document.getElementById("inverted_select");
+     
+        var options = {
+          "inverted": invertedSelect.options[invertedSelect.selectedIndex].value
+        }
+         
+        return options;
+      };
+     
+      var submitButton = document.getElementById("save_button");
+      submitButton.addEventListener("click", 
+        function() {
+          var options = saveOptions();
+          var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
+           
+          document.location = location;
+        }, 
+      false);
+
+      getAppVersionAndNews();
+    </script>
+  </body>
+</html>

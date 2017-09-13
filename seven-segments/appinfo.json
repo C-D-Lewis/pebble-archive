@@ -1,0 +1,26 @@
+{
+  "uuid": "2ba3eaf4-5369-4f11-87b0-7c74429e117e",
+  "shortName": "Seven Segments",
+  "longName": "Seven Segments",
+  "companyName": "Chris Lewis",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": true
+  },
+  "capabilities": 
+  [ "configurable" ],
+  "appKeys": {
+    "KEY_INVERTED": 0
+  },
+  "resources": {
+    "media": [
+      {
+        "menuIcon": true,
+        "type": "png",
+        "name": "APP_ICON",
+        "file": "images/app_icon.png"
+      }
+    ]
+  }
+}
