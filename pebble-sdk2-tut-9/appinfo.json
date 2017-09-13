@@ -1,0 +1,18 @@
+{
+  "uuid": "153ff30e-0288-4411-871c-fce3dcc99e5f",
+  "shortName": "sdktut9",
+  "longName": "sdktut9",
+  "capabilities": [ "configurable" ],
+  "companyName": "Chris Lewis",
+  "versionCode": 1,
+  "versionLabel": "1.0.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "KEY_INVERT": 0
+  },
+  "resources": {
+    "media": []
+  }
+}

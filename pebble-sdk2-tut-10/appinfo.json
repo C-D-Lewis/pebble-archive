@@ -1,0 +1,19 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "Chris Lewis",
+    "longName": "sdktut10",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "shortName": "sdktut10",
+    "uuid": "1391f6c7-68b7-4be6-808a-691abd878de5",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
