@@ -1,0 +1,21 @@
+{
+  "uuid": "4038e91c-4c13-4ecc-8bf0-6de39bb194ed",
+  "shortName": "SvnSegs Date",
+  "longName": "SvnSegs Date",
+  "companyName": "Chris Lewis",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": true
+  },
+  "resources": {
+    "media": [
+      {
+        "menuIcon": true,
+        "type": "png",
+        "name": "APP_ICON",
+        "file": "images/app_icon.png"
+      }
+    ]
+  }
+}
