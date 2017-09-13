@@ -1,0 +1,51 @@
+{
+  "uuid": "fca51b56-4ec3-4b17-9658-5a3eea077c5e",
+  "shortName": "pastfutureext",
+  "longName": "Past Future Extended",
+  "companyName": "Chris Lewis",
+  "versionCode": 1,
+  "versionLabel": "1.0.0",
+  "watchapp": {
+    "watchface": true
+  },
+  "capabilities": [
+    "location"
+  ],
+  "appKeys": {
+    "KEY_REQUEST_TEMPERATURE": 0
+  },
+  "resources": {
+    "media": [
+      {
+        "type": "font",
+        "name": "FONT_MEGAFONT_22",
+        "file": "fonts/megafont.ttf"
+      },
+      {
+        "type": "font",
+        "name": "FONT_MEGAFONT_15",
+        "file": "fonts/megafont.ttf"
+      },
+      {
+        "type": "png",
+        "name": "PAST",
+        "file": "images/past.png"
+      },
+      {
+        "type": "png",
+        "name": "PRESENT",
+        "file": "images/present.png"
+      },
+      {
+        "type": "png",
+        "name": "FUTURE",
+        "file": "images/future.png"
+      },
+      {
+        "type": "png",
+        "name": "MASK",
+        "file": "images/mask.png"
+      }
+    ]
+  }
+}
