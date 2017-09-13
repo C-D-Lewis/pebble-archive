@@ -1,0 +1,25 @@
+{
+  "uuid": "2893b0c4-2bca-4c83-a33a-0ef6ba6c8b17",
+  "shortName": "AccelStream",
+  "longName": "AccelStream",
+  "companyName": "Chris Lewis",
+  "versionCode": 2,
+  "versionLabel": "1.1",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "KEY_START": 0,
+    "KEY_X": 0,
+    "KEY_Y": 1,
+    "KEY_Z": 2
+  },
+  "resources": {
+    "media": []
+  },
+  "targetPlatforms": [
+    "aplite",
+    "basalt"
+  ],
+  "sdkVersion": "3"
+}
