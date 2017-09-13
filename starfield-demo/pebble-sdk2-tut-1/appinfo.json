@@ -1,0 +1,18 @@
+{
+    "versionLabel": "1.0",
+    "uuid": "56ad4b79-298b-4590-b076-2ffc9e4f477d",
+    "appKeys": {},
+    "longName": "SDKTut1",
+    "versionCode": 1,
+    "capabilities": [
+        ""
+    ],
+    "shortName": "SDKTut1",
+    "companyName": "Bonsitm",
+    "watchapp": {
+        "watchface": false
+    },
+    "resources": {
+        "media": []
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "versionLabel": "1.0",
+    "uuid": "36052bbb-2626-4656-ab95-0afd27d20aba",
+    "appKeys": {},
+    "longName": "SDKTut3",
+    "versionCode": 1,
+    "capabilities": [
+        ""
+    ],
+    "shortName": "SDKTut3",
+    "companyName": "Chris Lewis",
+    "watchapp": {
+        "watchface": true
+    },
+    "resources": {
+        "media": [
+            {
+                "type": "font",
+                "name": "IMAGINE_42",
+                "file": "fonts/imagine.ttf"
+            },
+            {
+                "type": "png",
+                "name": "PAST",
+                "file": "images/past.png"
+            },
+            {
+                "type": "png",
+                "name": "FUTURE",
+                "file": "images/future.png"
+            },
+            {
+                "menuIcon": true,
+                "type": "png",
+                "name": "MENU_ICON",
+                "file": "images/menu_icon.png"
+            }
+        ]
+    }
+}

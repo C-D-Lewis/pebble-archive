@@ -1,0 +1,18 @@
+{
+    "versionLabel": "1.0",
+    "uuid": "734b3400-8d13-4d3b-aef6-f396d179d95d",
+    "appKeys": {},
+    "longName": "SDKTut2",
+    "versionCode": 1,
+    "capabilities": [
+        ""
+    ],
+    "shortName": "SDKTut2",
+    "companyName": "Chris Lewis",
+    "watchapp": {
+        "watchface": true
+    },
+    "resources": {
+        "media": []
+    }
+}
