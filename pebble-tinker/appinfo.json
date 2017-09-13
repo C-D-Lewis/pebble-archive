@@ -1,0 +1,25 @@
+{
+  "uuid": "57d81e72-2ae5-4849-b720-f136dd60c071",
+  "shortName": "PebbleTinker",
+  "longName": "PebbleTinker",
+  "companyName": "Chris Lewis",
+  "versionCode": 2,
+  "versionLabel": "1.1.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "PIN_OFF": 0,
+    "PIN_ON": 1,
+    "PIN_EVENT": 2
+  },
+  "resources": {
+    "media": [
+      {
+        "type":"png",
+        "name":"BACKGROUND",
+        "file":"images/back8.png"
+      }
+    ]
+  }
+}
