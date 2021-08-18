@@ -1,0 +1,30 @@
+[
+  { 
+    "type": "heading", 
+    "size": 3,
+    "defaultValue": "Eventful Configuration" 
+  },
+  {
+    "type": "section",
+    "items": [
+      {
+        "type": "heading",
+        "size": 4,
+        "defaultValue": "Updates"
+      },
+      {
+        "type": "slider",
+        "defaultValue": 15,
+        "label": "Update frequency (minutes)",
+        "min": 5,
+        "max": 60,
+        "step": 5,
+        "messageKey": "UpdateFrequency"
+      }
+    ]
+  },
+  {
+    "type": "submit",
+    "defaultValue": "Save"
+  }
+]

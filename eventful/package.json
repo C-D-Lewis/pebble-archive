@@ -1,0 +1,44 @@
+{
+  "name": "Eventful",
+  "author": "Chris Lewis",
+  "version": "1.1.0",
+  "keywords": [
+    "pebble-app"
+  ],
+  "private": true,
+  "dependencies": {
+    "pebble-clay": "^1.0.2",
+    "pebble-dash-api": "^1.2.0"
+  },
+  "pebble": {
+    "displayName": "Eventful",
+    "uuid": "dd199294-e386-4f1b-aec0-fa7297b08fe0",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk"
+    ],
+    "watchapp": {
+      "watchface": true
+    },
+    "messageKeys": [
+      "UpdateFrequency"
+    ],
+    "resources": {
+      "media": [
+        {
+          "type": "bitmap",
+          "name": "ICONS",
+          "file": "images/icons.png"
+        },
+        {
+          "type": "font",
+          "name": "DS_DIGIB_60",
+          "file": "fonts/DS-DIGIB.TTF"
+        }
+      ]
+    }
+  }
+}
