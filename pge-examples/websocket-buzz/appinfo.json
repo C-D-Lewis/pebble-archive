@@ -1,0 +1,41 @@
+{
+  "uuid": "3FC92648-016C-4B7C-B472-23631A627E87",
+  "shortName": "PGE Websocket Example",
+  "longName": "PGE Websocket Example",
+  "companyName": "Chris Lewis",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "PGE_WS_KEY_0": 0,
+    "PGE_WS_KEY_1": 1,
+    "PGE_WS_KEY_2": 2,
+    "PGE_WS_KEY_3": 3,
+    "PGE_WS_KEY_4": 4,
+    "PGE_WS_KEY_5": 5,
+    "PGE_WS_KEY_6": 6,
+    "PGE_WS_KEY_7": 7,
+    "PGE_WS_KEY_8": 8,
+    "PGE_WS_KEY_9": 9,
+    "PGE_WS_KEY_10": 10,
+    "PGE_WS_KEY_11": 11,
+    "PGE_WS_KEY_12": 12,
+    "PGE_WS_KEY_13": 13,
+    "PGE_WS_KEY_14": 14,
+    "PGE_WS_KEY_15": 15,
+    "PGE_WS_URL": 100,
+    "PGE_WS_CLIENT_ID": 101,
+    "PGE_WS_READY": 102
+  },
+  "sdkVersion": "3",
+  "targetPlatforms": [
+    "aplite",
+    "basalt"
+  ],
+  "resources": {
+    "media": [
+    ]
+  }
+}

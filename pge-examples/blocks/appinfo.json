@@ -1,0 +1,18 @@
+{
+  "uuid": "bf7dc2d6-7ffd-432a-8472-a849242e2d07",
+  "shortName": "pge-test",
+  "longName": "pge-test",
+  "companyName": "MakeAwesomeHappen",
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["aplite", "basalt", "chalk"],
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
