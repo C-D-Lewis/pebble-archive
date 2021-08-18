@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "author": "Chris Lewis",
+  "private": true,
+  "keywords": [
+    "pebble-app"
+  ],
+  "pebble": {
+    "sdkVersion": "3",
+    "resources": {
+      "media": []
+    },
+    "projectType": "native",
+    "uuid": "bf7dc2d6-7ffd-432a-8472-a849242e2d07",
+    "messageKeys": {
+      "dummy": 0
+    },
+    "enableMultiJS": false,
+    "displayName": "pge-test",
+    "watchapp": {
+      "onlyShownOnCommunication": false,
+      "hiddenApp": false,
+      "watchface": false
+    },
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk",
+      "diorite",
+      "emery"
+    ],
+    "capabilities": []
+  },
+  "name": "pge-test",
+  "dependencies": {
+    "pebble-isometric": "^1.0.0",
+    "pebble-pge-simple": "file:///Users/chrislewis/Dropbox/Pebble-Dev/4.0/lib/pebble-pge-simple"
+  }
+}
