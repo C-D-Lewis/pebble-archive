@@ -1,0 +1,44 @@
+{
+  "name": "dual-gauge",
+  "author": "Chris Lewis",
+  "version": "1.4.0",
+  "keywords": [
+    "pebble-app"
+  ],
+  "private": true,
+  "dependencies": {
+    "pebble-dash-api": "^1.5.0"
+  },
+  "pebble": {
+    "displayName": "Dual Gauge",
+    "uuid": "5425ca0f-ffdb-445e-995c-98601a41e50c",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk",
+      "diorite"
+    ],
+    "watchapp": {
+      "watchface": true
+    },
+    "messageKeys": [
+      "dummy"
+    ],
+    "resources": {
+      "media": [
+        {
+          "type": "bitmap",
+          "name": "ICON_PHONE",
+          "file": "images/icon_phone.png"
+        },
+        {
+          "type": "bitmap",
+          "name": "ICON_WATCH",
+          "file": "images/icon_watch.png"
+        }
+      ]
+    }
+  }
+}
