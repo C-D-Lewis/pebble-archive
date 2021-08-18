@@ -1,0 +1,45 @@
+{
+  "name": "Time Dots",
+  "version": "1.4.0",
+  "author": "Chris Lewis",
+  "private": true,
+  "keywords": [
+    "pebble-app"
+  ],
+  "pebble": {
+    "sdkVersion": "3",
+    "resources": {
+      "media": []
+    },
+    "projectType": "native",
+    "uuid": "751fca17-11b9-4e74-aadf-a2424f8a8454",
+    "messageKeys": {
+      "ColorTypeBackground": 0,
+      "ColorTypeRing": 1,
+      "ColorTypeDotInactive": 2,
+      "ColorTypeDotActive": 3,
+      "ShowMinutes": 4,
+      "BTAlert": 5
+    },
+    "enableMultiJS": true,
+    "displayName": "Time Dots",
+    "watchapp": {
+      "onlyShownOnCommunication": false,
+      "hiddenApp": false,
+      "watchface": true
+    },
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk",
+      "diorite"
+    ],
+    "capabilities": [
+      "configurable"
+    ]
+  },
+  "dependencies": {
+    "pebble-clay": "^1.0.3",
+    "pebble-packet": "^1.3.2"
+  }
+}

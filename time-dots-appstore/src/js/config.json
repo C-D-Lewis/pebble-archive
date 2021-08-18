@@ -1,0 +1,64 @@
+[
+  { 
+    "type": "heading", 
+    "defaultValue": "Time Dots Configuration" 
+  },
+  {
+    "type": "section",
+    "items": [
+      {
+        "type": "heading",
+        "defaultValue": "Features"
+      },
+      {
+        "type": "toggle",
+        "defaultValue": true,
+        "label": "Minutes ring (saves power if off)",
+        "messageKey": "ShowMinutes"
+      },
+      {
+        "type": "toggle",
+        "defaultValue": true,
+        "label": "Disconnection alert (12 o'clock dot. Blue on color watches, black on monochrome watches)",
+        "messageKey": "BTAlert"
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "items": [
+      {
+        "type": "heading",
+        "defaultValue": "Colors"
+      },
+      {
+        "type": "color",
+        "messageKey": "ColorTypeBackground",
+        "label": "Background",
+        "defaultValue": "0000aa"
+      },
+      {
+        "type": "color",
+        "messageKey": "ColorTypeRing",
+        "label": "Ring",
+        "defaultValue": "0055ff"
+      },
+      {
+        "type": "color",
+        "messageKey": "ColorTypeDotActive",
+        "label": "Dot (Active)",
+        "defaultValue": "ffffff"
+      },
+      {
+        "type": "color",
+        "messageKey": "ColorTypeDotInactive",
+        "label": "Dot (Inactive)",
+        "defaultValue": "000000"
+      }
+    ]
+  },
+  {
+    "type": "submit",
+    "defaultValue": "Save"
+  }
+]
