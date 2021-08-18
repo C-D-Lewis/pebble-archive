@@ -1,0 +1,22 @@
+{
+  "name": "pebble-timeline-js-node",
+  "version": "1.1.0",
+  "description": "Node library to push Pebble timeline pins and set AppGlances",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C-D-Lewis/pebble-timeline-js-node.git"
+  },
+  "author": "Chris Lewis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/C-D-Lewis/pebble-timeline-js-node/issues"
+  },
+  "homepage": "https://github.com/C-D-Lewis/pebble-timeline-js-node#readme",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
+}
